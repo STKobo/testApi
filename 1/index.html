@@ -22,6 +22,8 @@ request.send()
 
 request.onload = function () {
     response_from_postman_echo = JSON.parse(request.responseText, true);
+    response = document.getElementById('response');
+    response.innerHTML = response_from_postman_echo.args.valeur1 + ' ' + response_from_postman_echo.args.valeur2;
     console.log(response_from_postman_echo);
 }
 </script>
